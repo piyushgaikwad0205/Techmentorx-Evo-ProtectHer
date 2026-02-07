@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF0000"
+    tools:context=".SplashScreen">
+
+    <!-- Rounded Logo Container -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/logoContainer"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:layout_centerInParent="true"
+        android:elevation="8dp"
+        app:cardCornerRadius="140dp"
+        app:cardBackgroundColor="#FFFFFF"
+        android:alpha="0"
+        tools:alpha="1">
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="40dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_protecther_shield"
+            app:tint="#FF0000" />
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- App Name (below logo) -->
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logoContainer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="ProtectHer"
+        android:textColor="#FFFFFF"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:alpha="0"
+        tools:alpha="1" />
+
+    <!-- Tagline (below app name) -->
+    <TextView
+        android:id="@+id/appTagline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="Protect Her Name"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        android:letterSpacing="0.1"
+        android:alpha="0"
+        tools:alpha="1" />
+
+    <!-- Shimmer Overlay for Shine Effect -->
+    <View
+        android:id="@+id/shimmerOverlay"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/shimmer_gradient"
+        android:alpha="0.5"
+        android:translationX="-200dp" />
+
+</RelativeLayout>

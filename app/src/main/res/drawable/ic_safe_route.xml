@@ -1,0 +1,35 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="40dp"
+    android:height="40dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Map Structure -->
+    <path
+        android:strokeColor="#2D8042"
+        android:strokeWidth="1.8"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M3,7l6,-3.5l6,3.5l6,-3.5v14l-6,3.5l-6,-3.5l-6,3.5z" />
+    <path
+        android:strokeColor="#2D8042"
+        android:strokeWidth="1.8"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M9,3.5v14" />
+    <path
+        android:strokeColor="#2D8042"
+        android:strokeWidth="1.8"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M15,7v14" />
+
+    <!-- Location Pin Overlay -->
+    <path
+        android:strokeColor="#2D8042"
+        android:strokeWidth="1.5"
+        android:fillColor="#FFFFFF"
+        android:pathData="M15,3c-2.209,0-4,1.791-4,4c0,3.5 4,7.5 4,7.5s4,-4 4,-7.5C19,4.791,17.209,3,15,3z" />
+    <path
+        android:fillColor="#2D8042"
+        android:pathData="M15,7m-1.2,0a1.2,1.2 0,1 1,2.4 0a1.2,1.2 0,1 1,-2.4 0" />
+</vector>

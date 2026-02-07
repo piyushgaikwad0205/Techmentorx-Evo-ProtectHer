@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <!-- Scrollable Content including Header -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:paddingBottom="100dp"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="20dp">
+
+            <!-- Standard Header (Moved Inside ScrollView) -->
+            <RelativeLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:layout_marginTop="16dp"
+                android:paddingBottom="10dp">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:srcCompat="@drawable/ic_women_logo_new"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:id="@+id/tvGreeting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Device Connect"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_toEndOf="@id/imageView"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="12dp" />
+
+                <ImageView
+                    android:id="@+id/editMessage"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/ic_settings"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    app:tint="#000000" />
+            </RelativeLayout>
+
+            <!-- Main Content Area -->
+            <LinearLayout
+                android:id="@+id/contentArea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="16dp"
+                android:paddingBottom="16dp">
+
+                <!-- Watch & Ripple Section -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:gravity="center">
+
+                    <!-- Ripple Circles -->
+                    <View
+                        android:id="@+id/ripple1"
+                        android:layout_width="250dp"
+                        android:layout_height="250dp"
+                        android:background="@drawable/ripple_circle"
+                        android:alpha="0.3"
+                        android:visibility="invisible"
+                        android:layout_centerInParent="true" />
+
+                    <View
+                        android:id="@+id/ripple2"
+                        android:layout_width="250dp"
+                        android:layout_height="250dp"
+                        android:background="@drawable/ripple_circle"
+                        android:alpha="0.2"
+                        android:visibility="invisible"
+                        android:layout_centerInParent="true" />
+
+                    <View
+                        android:id="@+id/ripple3"
+                        android:layout_width="250dp"
+                        android:layout_height="250dp"
+                        android:background="@drawable/ripple_circle"
+                        android:alpha="0.1"
+                        android:visibility="invisible"
+                        android:layout_centerInParent="true" />
+
+                    <!-- Smartwatch Illustration -->
+                    <RelativeLayout
+                        android:id="@+id/frame_54"
+                        android:layout_width="197.26dp"
+                        android:layout_height="353.98dp"
+                        android:layout_centerInParent="true">
+
+                        <ImageView
+                            android:id="@+id/imageView6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/ic_smartwatch_search" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <!-- Subtitle -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:text="Sync your mobile app to your smartwatch for better data"
+                    android:textColor="#666666"
+                    android:textSize="14sp"
+                    android:paddingHorizontal="32dp" />
+
+                <!-- Scan Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnScanNow"
+                    style="@style/Widget.Material3.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="24dp"
+                    android:elevation="0dp"
+                    android:text="Scan for Devices"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="#FF3B30"
+                    app:cornerRadius="16dp" />
+
+                <!-- Scanning Status Indicator -->
+                <LinearLayout
+                    android:id="@+id/scanningLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:visibility="gone">
+                    <ProgressBar
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:indeterminateTint="#FF3B30" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Scanning..."
+                        android:textColor="#FF3B30"
+                        android:layout_marginStart="8dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <!-- Paired Devices Section -->
+                <LinearLayout
+                    android:id="@+id/pairedDevicesSection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Paired Device"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerPairedDevices"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false" />
+                </LinearLayout>
+
+                <!-- Available Devices Section -->
+                <LinearLayout
+                    android:id="@+id/availableDevicesSection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Available Devices"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="8dp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerAvailableDevices"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Floating Bottom Nav (Fixed) -->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

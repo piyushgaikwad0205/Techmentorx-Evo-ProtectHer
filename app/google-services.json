@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "838324222461",
+    "project_id": "sagar-women-sos",
+    "storage_bucket": "sagar-women-sos.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:838324222461:android:74b986ac0173f5399c4194",
+        "android_client_info": {
+          "package_name": "com.example.sos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "838324222461-q1ai7ugimqp3hqjpu8vr52t8ta5sinnp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCrvNq31Kt_5GKPu7ML3F2766ztLwPcpc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "838324222461-q1ai7ugimqp3hqjpu8vr52t8ta5sinnp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

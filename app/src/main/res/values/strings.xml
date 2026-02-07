@@ -1,3 +1,109 @@
 <resources>
     <string name="app_name">ProtectHer</string>
+    <string name="default_web_client_id">
+        838324222461-vlh87520e588439k18507204k196642f.apps.googleusercontent.com</string>
+    <string name="burn">
+        <b>A. \t Cool the burn : </b> Hold the burned area under \n\t\t\t cool (not cold) running
+        water or apply a cool, wet \n\t\t\t compress until the pain eases. Do not use \n\t\t\t ice.
+        Putting ice directly on a burn can cause \n\t\t\t further damage to the tissue.\n\n <b>B. \t
+        Apply lotion : </b> Once a burn is completely cooled, \n\t\t\t apply a lotion, such as one
+        that contains aloe \n\t\t\t vera or a moisturizer. This helps prevent drying \n\t\t\t and
+        provides relief.\n\n <b>C. \t Bandage the burn : </b> Cover the burn with a sterile \n\t\t\t
+        gauze bandage (not fluffy cotton).Wrap it \n\t\t\t loosely to avoid putting pressure on
+        burned \n\t\t\t skin.Bandaging keeps air off the area, reduces \n\t\t\t pain and protects
+        blistered skin.\n\n <b>D. \t Take a pain reliever : </b> Over-the-counter \n\t\t\t
+        medications, such as ibuprofen (Advil, Motrin IB, \n\t\t\t others), naproxen sodium (Aleve)
+        or \n\t\t\t acetaminophen (Tylenol, others), can help relieve \n\t\t\t pain.\n </string>
+
+    <string name="bone">
+        <b>First aid</b>\n\n <b>A.</b> \t\t Keep the person still do not move them unless \n\t\t\t\t
+        there is an immediate danger, especially if you \n\t\t\t\t suspect fracture of the skull,
+        spine, ribs, pelvis \n\t\t\t\t or upper leg.\n\n <b>B.</b> \t\t Attend to any bleeding
+        wounds first. Stop the \n\t\t\t\t bleeding by pressing firmly on the site with a \n\t\t\t\t
+        clean dressing. If a bone is protruding, apply \n\t\t\t\t pressure around the edges of the
+        wound.\n\n <b>C.</b> \t\t For a limb fracture, provide support and \n\t\t\t\t comfort such
+        as a pillow under the lower leg or \n\t\t\t\t forearm. However, do not cause further pain or
+        \n\t\t\t\t unnecessary movement of the broken bone.\n\n <b>D.</b> \t\t Apply a splint to
+        support the limb. Splints do \n\t\t\t\t not have to be professionally manufactured.
+        \n\t\t\t\t Items like wooden boards and folded \n\t\t\t\t magazines can work for some
+        fractures. You \n\t\t\t\t should immobilise the limb above and below \n\t\t\t\t the
+        fracture.\n\n <b>E.</b> \t\t Stop the person from eating or drinking \n\t\t\t\t anything
+        until they are seen by a health care \n\t\t\t\t professional in case they need surgery.\n </string>
+
+    <string name="bleed">
+        <b>First Aid</b>\n\n <b>A.</b> \t\t Lie the person down. If a limb is injured, raise
+        \n\t\t\t\t the injured area above the level of the person’s.\n\n <b>B.</b> \t\t Get the
+        person to apply direct pressure to the \n\t\t\t\t wound with their hand or hands to stem the
+        \n\t\t\t\t blood flow.If the person can’t do it, apply direct \n\t\t\t\t pressure
+        yourself.\n\n <b>C.</b> \t\t If an object is embedded in the wound, do not \n\t\t\t\t remove
+        it. Apply pressure around the object.\n\n <b>D.</b> \t\t If blood saturates the initial
+        dressing, do not \n\t\t\t\t remove it. Add fresh padding over the top and \n\t\t\t\t secure
+        with a bandage.\n </string>
+
+    <string name="add">
+        <br><b>1.</b>Add emergency contact name</br>
+        <br><b>2.</b>Add emergency contact number</br>
+        <br><b>3.</b>Save contact to list</br>
+        <br><b>4.</b>Add emergency contact from </br>
+        <br>contact list</br>
+    </string>
+
+    <string name="message">
+        <br><b>1.</b>Message appear here</br>
+        <br><b>2.</b>Enter your message</br>
+        <br><b>3.</b>Save message</br>
+        <br><b>4.</b>Delete message </br>
+        <br>contact list</br>
+    </string>
+
+    <string name="contact">
+        <br><b>1.</b>Long press to delete contact</br>
+    </string>
+
+    <string name="help">
+        <br><b>1.</b>Click call to automatically call</br>
+        <br>the number</br>
+    </string>
+
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="title_activity_directmap">directmap</string>
+    <string name="edit_message">I am in DANGER, i need help. Please urgently reach me out.</string>
+    <string name="about_app">Welcome to our SOS application! This user manual will guide you through
+        the functionalities of our app so that you can utilize it effectively during emergencies.</string>
+    <string name="steps"><big>
+            <b>1. Adding Emergency Contacts:</b>
+        </big>\n\nOpen the app and navigate to the
+        \n"Add Emergency Contacts\n" section.\nAdd at least one and up to five emergency
+        numbers.\nThese contacts will receive emergency messages along with your current location
+        during an SOS situation.\n\n<big>
+            <b>2. Managing Registered Numbers:</b>
+        </big>\n\nIn the \"Contact list\" section,
+        view and manage your emergency contacts.\nDelete old contacts or add new ones as per your
+        preference.\n\n<big>
+            <b>3. Customizing Emergency Message:</b>
+        </big>\n\nHead to the \"Edit Message\"
+        section.\nEnter a personalized emergency message.\nSave the message. This message will be
+        sent to your emergency contacts during an SOS situation.\n\n<big>
+            <b>4. Accessing Helpline Numbers:</b>
+        </big>\n\nExplore the \"Helpline\"
+        section.\nFind essential emergency numbers like ambulance, police, fire services,
+        etc.\nDirectly call these numbers with a simple tap.\n\n<big>
+            <b>5. First Aid Information:</b>
+        </big>\n\nAccess the \"SOS Guide\" section.\nGet
+        instructions for immediate actions to be taken in various emergency scenarios like burns,
+        fractures, etc.\n\n<big>
+            <b>6. Activating Emergency Mode:</b>
+        </big>\n\nLocate the \"Emergency Mode\"
+        button.\nTap on it to navigate to another activity.\nIn the new activity, find \"Start\" and
+        \"Stop\" buttons.\nPress \"Start\" to activate emergency mode.\nOnce activated, you\'ll
+        receive a notification.\nDuring emergency mode, shake your device to trigger an SOS message
+        along with your current location to your registered emergency contacts.\nThey will be able
+        to track your location and provide assistance.\n\nRemember, our app is designed to provide
+        you with quick and efficient assistance during emergencies. Keep your emergency contacts
+        updated and ensure your personalized emergency message is clear and concise. Stay safe!</string>
+    <string name="google_api_key" translatable="false">AIzaSyDCrvNq31Kt_5GKPu7ML3F2766ztLwPcpc</string>
+    <string name="safety_alert_title">Are you safe?</string>
+    <string name="safety_alert_message">We detected unusual activity. Please confirm you are safe.</string>
+    <string name="btn_im_safe">I AM SAFE</string>
+    <string name="route_deviation_alert">You are off route!</string>
 </resources>

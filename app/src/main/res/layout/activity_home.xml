@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".HomeActivity">
+
+    <!-- Scrollable Content (Header + Shadow Mode + Tools) -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:paddingBottom="100dp"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingTop="16dp">
+
+            <!-- Header Section (Scrollable) -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:srcCompat="@drawable/ic_women_logo_new"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:id="@+id/tvGreeting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hello, Guardian"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_toEndOf="@id/imageView"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="12dp" />
+
+                <ImageView
+                    android:id="@+id/editMessage"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/ic_settings"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    app:tint="#000000" />
+            </RelativeLayout>
+
+            <!-- Shadow Mode Section (Image Button with Ripples) -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <!-- Ripple Circles -->
+                <View
+                    android:id="@+id/ripple1"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:background="@drawable/ripple_circle"
+                    android:alpha="0.3"
+                    android:visibility="invisible"
+                    android:layout_gravity="center" />
+
+                <View
+                    android:id="@+id/ripple2"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:background="@drawable/ripple_circle"
+                    android:alpha="0.2"
+                    android:visibility="invisible"
+                    android:layout_gravity="center" />
+
+                <View
+                    android:id="@+id/ripple3"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:background="@drawable/ripple_circle"
+                    android:alpha="0.1"
+                    android:visibility="invisible"
+                    android:layout_gravity="center" />
+
+                <!-- Shadow Mode Button -->
+                <ImageView
+                    android:id="@+id/btnSosService"
+                    android:layout_width="280dp"
+                    android:layout_height="280dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/shadow_mode_btn"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:contentDescription="Shadow Mode Button" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tvShadowSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Live location is Shared"
+                android:textColor="#333333"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Grid Header -->
+            <TextView
+                android:id="@+id/tvProtectionToolsHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Protection Tools"
+                android:textColor="#F92A2A"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingHorizontal="24dp"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Tools Grid -->
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:alignmentMode="alignMargins"
+                android:paddingHorizontal="16dp"
+                android:layout_marginBottom="16dp">
+
+                <!-- Nearby Help -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/btnNearby"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="14dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="#DDDDDD"
+                    app:strokeWidth="1dp"
+                    app:cardBackgroundColor="#F9F9F9">
+                    <LinearLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:orientation="vertical"
+                        android:padding="16dp" android:gravity="center">
+                        <ImageView android:layout_width="32dp" android:layout_height="32dp"
+                            android:src="@drawable/ic_nearby_help" android:layout_marginBottom="8dp" />
+                        <TextView android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="Nearby Help"
+                            android:textColor="#000000" android:textStyle="bold"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Safe Route -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/btnSafeRoute"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="14dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="#DDDDDD"
+                    app:strokeWidth="1dp"
+                    app:cardBackgroundColor="#F9F9F9">
+                    <LinearLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:orientation="vertical"
+                        android:padding="16dp" android:gravity="center">
+                        <ImageView android:layout_width="32dp" android:layout_height="32dp"
+                            android:src="@drawable/ic_safe_route" android:layout_marginBottom="8dp" />
+                        <TextView android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="Safe Route"
+                            android:textColor="#000000" android:textStyle="bold"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Helpline -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/helpline"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="14dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="#DDDDDD"
+                    app:strokeWidth="1dp"
+                    app:cardBackgroundColor="#F9F9F9">
+                    <LinearLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:orientation="vertical"
+                        android:padding="16dp" android:gravity="center">
+                        <ImageView android:layout_width="32dp" android:layout_height="32dp"
+                            android:src="@drawable/ic_helpline_shield"
+                            android:layout_marginBottom="8dp" />
+                        <TextView android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="Helpline"
+                            android:textColor="#000000" android:textStyle="bold"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Evidence -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/btnGallery"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="14dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="#DDDDDD"
+                    app:strokeWidth="1dp"
+                    app:cardBackgroundColor="#F9F9F9">
+                    <LinearLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:orientation="vertical"
+                        android:padding="16dp" android:gravity="center">
+                        <ImageView android:layout_width="32dp" android:layout_height="32dp"
+                            android:src="@drawable/ic_evidence_camera"
+                            android:layout_marginBottom="8dp" />
+                        <TextView android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="Evidence"
+                            android:textColor="#000000" android:textStyle="bold"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Safety Check -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/btnSafetyCheck"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="14dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="#DDDDDD"
+                    app:strokeWidth="1dp"
+                    app:cardBackgroundColor="#F9F9F9">
+                    <LinearLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:orientation="vertical"
+                        android:padding="16dp" android:gravity="center">
+                        <ImageView android:layout_width="32dp" android:layout_height="32dp"
+                            android:src="@drawable/ic_helpline_orange_shield"
+                            android:layout_marginBottom="8dp" />
+                        <TextView android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="Safety Check"
+                            android:textColor="#000000" android:textStyle="bold"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Device Connect -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/btnDeviceConnect"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="14dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="#DDDDDD"
+                    app:strokeWidth="1dp"
+                    app:cardBackgroundColor="#F9F9F9">
+                    <LinearLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:orientation="vertical"
+                        android:padding="16dp" android:gravity="center">
+                        <ImageView android:layout_width="32dp" android:layout_height="32dp"
+                            android:src="@drawable/ic_device_watch_blue"
+                            android:layout_marginBottom="8dp" />
+                        <TextView android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" android:text="Device Connect"
+                            android:textColor="#000000" android:textStyle="bold"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </GridLayout>
+
+            <!-- Trusted Contacts -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardShowContact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="0dp"
+                app:strokeColor="#DDDDDD"
+                app:strokeWidth="1dp"
+                app:cardBackgroundColor="#F9F9F9">
+
+                <LinearLayout
+                    android:id="@+id/showContact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="16dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/contact"
+                        app:tint="#000000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="Trusted Contacts"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Link with Parents -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardRegisterContact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="0dp"
+                app:strokeColor="#DDDDDD"
+                app:strokeWidth="1dp"
+                app:cardBackgroundColor="#F9F9F9">
+
+                <LinearLayout
+                    android:id="@+id/registerContact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="16dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_family"
+                        app:tint="#000000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="Link with Parents"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Floating Bottom Nav (Modern Style) -->
+    <!-- Custom Floating Bottom Navigation -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:paddingBottom="20dp"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+        <!-- Navigation Pill Background -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/nav_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="60dp"
+            app:cardCornerRadius="35dp"
+            app:cardElevation="12dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottom_navigation"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@android:color/transparent"
+                android:paddingVertical="8dp"
+                app:elevation="0dp"
+                app:itemIconSize="24dp"
+                app:itemIconTint="@color/nav_item_colors"
+                app:itemTextColor="@color/nav_item_colors"
+                app:itemRippleColor="@android:color/transparent"
+                app:labelVisibilityMode="unlabeled"
+                app:itemTextAppearanceActive="@style/BottomNavTextActive"
+                app:itemTextAppearanceInactive="@style/BottomNavTextInactive"
+                app:menu="@menu/bottom_nav_menu" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Large Smart Defense Floating Button -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/btnSmartDefenseFAB"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            app:cardCornerRadius="36dp"
+            app:cardElevation="20dp"
+            app:cardBackgroundColor="?attr/colorPrimary"
+            app:strokeWidth="4dp"
+            app:strokeColor="#FFFFFF"
+            android:layout_marginBottom="25dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_shield"
+                app:tint="#FFFFFF" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

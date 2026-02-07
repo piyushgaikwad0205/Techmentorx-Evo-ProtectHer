@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home_filled"
+        android:title="Home" />
+    <item
+        android:id="@+id/nav_smart_defence"
+        android:icon="@drawable/transparent_icon"
+        android:enabled="false"
+        android:title="Smart Defence" />
+    <item
+        android:id="@+id/nav_parents"
+        android:icon="@drawable/ic_family"
+        android:title="Parents" />
+</menu>

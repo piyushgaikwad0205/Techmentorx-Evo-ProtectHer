@@ -1,10 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
+    <!-- Base Colors -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="vibrant_red">#FF0000</color>
+    <color name="vibrant_red_dark">#D50000</color>
+
+    <!-- ========================================== -->
+    <!-- PROFESSIONAL THEME - Matching SOS Icon    -->
+    <!-- Red/Orange for Emergency, Purple for Power -->
+    <!-- ========================================== -->
+
+    <!-- Primary - Vibrant Red/Orange (Matches SOS Icon) -->
+    <color name="colorPrimary">#FF5722</color>              <!-- Deep Orange - Emergency Alert -->
+    <color name="colorPrimaryDark">#E64A19</color>          <!-- Darker Orange -->
+    <color name="colorPrimaryContainer">#FFCCBC</color>     <!-- Light Orange Container -->
+    <color name="colorOnPrimaryContainer">#BF360C</color>   <!-- Dark text on light container -->
+
+    <!-- Secondary - Empowering Purple -->
+    <color name="colorSecondary">#9C27B0</color>            <!-- Purple - Strength & Empowerment -->
+    <color name="colorSecondaryContainer">#F3E5F5</color>   <!-- Light Purple Container -->
+    <color name="colorOnSecondaryContainer">#4A148C</color> <!-- Dark Purple text -->
+
+    <!-- Tertiary - Safety Blue -->
+    <color name="colorTertiary">#2196F3</color>             <!-- Blue - Trust & Safety -->
+    <color name="colorTertiaryContainer">#E3F2FD</color>    <!-- Light Blue Container -->
+    <color name="colorOnTertiaryContainer">#0D47A1</color>  <!-- Dark Blue text -->
+
+    <!-- ========================================== -->
+    <!-- LIGHT THEME COLORS                         -->
+    <!-- ========================================== -->
+    <color name="light_primary">#FF5722</color>
+    <color name="light_onPrimary">#FFFFFF</color>
+    <color name="light_background">#FAFAFA</color>
+    <color name="light_surface">#FFFFFF</color>
+    <color name="light_surfaceVariant">#F5F5F5</color>
+    <color name="light_onSurface">#212121</color>
+    <color name="light_onSurfaceVariant">#616161</color>
+
+    <!-- ========================================== -->
+    <!-- DARK THEME COLORS                          -->
+    <!-- ========================================== -->
+    <color name="dark_primary">#FF8A65</color>              <!-- Lighter Orange for dark mode -->
+    <color name="dark_onPrimary">#3E2723</color>
+    <color name="dark_background">#121212</color>
+    <color name="dark_surface">#1E1E1E</color>
+    <color name="dark_surfaceVariant">#2C2C2C</color>
+    <color name="dark_onSurface">#E0E0E0</color>
+    <color name="dark_onSurfaceVariant">#BDBDBD</color>
+
+    <!-- ========================================== -->
+    <!-- FUNCTIONAL COLORS                          -->
+    <!-- ========================================== -->
+    <color name="colorError">#D32F2F</color>                <!-- Red for errors -->
+    <color name="colorOnError">#FFFFFF</color>
+    <color name="colorSuccess">#4CAF50</color>              <!-- Green for success -->
+    <color name="colorWarning">#FF9800</color>              <!-- Orange for warnings -->
+
+    <!-- ========================================== -->
+    <!-- TEXT COLORS                                -->
+    <!-- ========================================== -->
+    <color name="text_primary">#212121</color>              <!-- Dark Gray -->
+    <color name="text_secondary">#757575</color>            <!-- Medium Gray -->
+    <color name="text_light">#9E9E9E</color>                <!-- Light Gray -->
+
+    <!-- ========================================== -->
+    <!-- LEGACY COMPATIBILITY COLORS                -->
+    <!-- ========================================== -->
+    <color name="error_red">#D32F2F</color>
+    <color name="success_green">#4CAF50</color>
+    <color name="warning_orange">#FF9800</color>
+    <color name="purple_500">#9C27B0</color>
+    <color name="purple_700">#7B1FA2</color>
+    <color name="red_700">#D32F2F</color>
+
+    <!-- ========================================== -->
+    <!-- BACKGROUND & SURFACE COLORS                -->
+    <!-- ========================================== -->
+    <color name="background_light">#FAFAFA</color>
+    <color name="surface_white">#FFFFFF</color>
+    <color name="surface_light">#F5F5F5</color>
+
+    <!-- Material 3 Direct Mappings -->
+    <color name="colorSurface">#FFFFFF</color>
+    <color name="colorOnSurface">#212121</color>
+    <color name="colorSurfaceVariant">#F5F5F5</color>
+    <color name="colorOnSurfaceVariant">#616161</color>
+    <color name="colorOutline">#E0E0E0</color>
 </resources>

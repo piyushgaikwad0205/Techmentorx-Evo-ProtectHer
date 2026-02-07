@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/rounded_bg_gray_light"
+    android:padding="16dp"
+    android:layout_marginBottom="12dp"
+    android:gravity="center_vertical">
+
+    <!-- Avatar Circle -->
+    <LinearLayout
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:background="@drawable/circle_icon_bg_gray"
+        android:gravity="center">
+        <!-- Assuming circle_icon_bg_gray exists or we assume rounded_bg handles corner? 
+             Actually design shows a circle with an icon inside. 
+             Let's use a CardView for circle or a shape drawable.
+             Since I don't want to create too many drawables, I'll use a CardView wrapper for the image.
+        -->
+        <ImageView
+            android:id="@+id/contactAvatar"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_person"
+            android:tint="#808080" />
+    </LinearLayout>
+
+    <!-- Info -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginStart="16dp">
+
+        <TextView
+            android:id="@+id/recyclerContactName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Home"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/recyclerContactNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+91 123456789"
+            android:textColor="#333333"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/callButton"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_phone_outline" />
+
+    <ImageView
+        android:id="@+id/deleteButton"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:padding="2dp"
+        android:src="@drawable/ic_delete"
+        android:layout_marginStart="16dp"
+        android:alpha="0.5" />
+
+</LinearLayout>
