@@ -2,8 +2,8 @@ name: Android Release
 
 on:
   push:
-    branches:
-      - main
+    tags:
+      - 'v*.*.*'
 
 jobs:
   build:
@@ -22,15 +22,31 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
-      - name: Build with Gradle
+      - name: Build unsigned APK
+        run: ./gradlew assembleRelease
+
+      - name: Sign APK
         env:
+          KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
           KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
           KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
           KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
-        run: ./gradlew assembleRelease
+        run: |
+          echo $KEYSTORE_BASE64 | base64 --decode > release-key.jks
+          jarsigner -verbose -sigalg SHA256withRSA -digestalg SHA-256 \
+            -keystore release-key.jks \
+            -storepass $KEYSTORE_PASSWORD \
+            -keypass $KEY_PASSWORD \
+            app/build/outputs/apk/release/app-release-unsigned.apk \
+            $KEY_ALIAS
+          zipalign -v 4 app/build/outputs/apk/release/app-release-unsigned.apk app/build/outputs/apk/release/app-release.apk
 
-      - name: Upload APK
-        uses: actions/upload-artifact@v2
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
         with:
-          name: app-release.apk
-          path: app/build/outputs/apk/release/app-release.apk
+          files: app/build/outputs/apk/release/app-release.apk
+          tag_name: ${{ github.ref_name }}
+          name: "Release ${{ github.ref_name }}"
+          body: "Latest release"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
